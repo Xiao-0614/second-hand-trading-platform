@@ -17,6 +17,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
+	implementation("com.amazonaws:aws-java-sdk-s3:1.12.114")
+
 }
 
 tasks.withType<Test> {
