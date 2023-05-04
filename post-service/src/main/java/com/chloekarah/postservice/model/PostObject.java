@@ -1,5 +1,6 @@
-package com.chloekarah.postservice;
+package com.chloekarah.postservice.model;
 
+import com.chloekarah.postservice.dto.PostDto;
 import java.util.UUID;
 
 public class PostObject {
@@ -9,6 +10,8 @@ public class PostObject {
     private String description;
     private long postAt;
     private boolean status;
+
+    public PostObject() {}
 
     private PostObject(Builder builder) {
         setUuid(builder.uuid);
@@ -27,7 +30,7 @@ public class PostObject {
         this.uuid = uuid;
     }
 
-    public static String getPost_name() {
+    public String getPost_name() {
         return post_name;
     }
 
@@ -43,7 +46,7 @@ public class PostObject {
         this.item_name = item_name;
     }
 
-    public static String getDescription() {
+    public String getDescription() {
         return description;
     }
 
@@ -70,8 +73,8 @@ public class PostObject {
 
     public static PostObject fromFibDto(PostDto postDto) {
         return PostObject.Builder.newBuilder()
-                .withPostName(postDto.getPost_name())
-                .withItemName(postDto.getItem_name())
+                .withPostName(postDto.getPostName())
+                .withItemName(postDto.getItemName())
                 .withDescription(postDto.getDescription())
                 .withStatus((postDto.isStatus()))
                 .build();
@@ -130,6 +133,11 @@ public class PostObject {
         }
 
 
+    }
+
+    public static String randomCall() {
+        System.out.println("example");
+        return "ok";
     }
 
 

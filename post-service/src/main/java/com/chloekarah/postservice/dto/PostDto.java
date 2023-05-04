@@ -1,31 +1,31 @@
-package com.chloekarah.postservice;
+package com.chloekarah.postservice.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PostDto {
 
-    private String post_name;
-    private String item_name;
+    private String postName;
+    private String itemName;
     private String description;
     private boolean status;
 
     public PostDto() {
     }
 
-    public String getPost_name() {
-        return post_name;
+    public String getPostName() {
+        return postName;
     }
 
-    public void setPost_name(String post_name) {
-        this.post_name = post_name;
+    public void setPostName(String postName) {
+        this.postName = postName;
     }
 
-    public String getItem_name() {
-        return item_name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setItem_name(String item_name) {
-        this.item_name = item_name;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public String getDescription() {
